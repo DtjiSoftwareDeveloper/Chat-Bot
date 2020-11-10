@@ -47,10 +47,10 @@ def main():
     """
 
     print("BOT: Hello, what is your name?")
-    name: str = input("")  # Asking the user to enter his/her name
+    name: str = input("Anonymous user: ")  # Asking the user to enter his/her name
     print("BOT: Nice to meet you, " + str(name).capitalize() + "!")
     while True:
-        message: str = input("")  # asking the user to enter a message
+        message: str = input(str(name).capitalize() + ": ")  # asking the user to enter a message
         # Detecting what the BOT will say based on your message
         if message[0:2].upper() == "IS" or message[0:3].upper() == "ARE":
             possible_answers: list = ["Yes", "No", "It depends", "I don't know"]
